@@ -16,7 +16,7 @@ from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
 import numpy
-with open('Data.txt') as f:
+with open('/content/Data.txt') as f:
     lines = f.readlines()
 lines = [x.replace("\n","") for x in lines if x != "\n"]
 df = (pd.DataFrame(lines)).dropna()
@@ -181,7 +181,7 @@ for i in range(len(final)):
 
 final1 = []
 
-filters = ["fnalr", "fnalo", "fnalre", "dem", "9500sqft", "72pup¶228t", ":onc", "onc", "lac", "e", ".on", "sal", "...al"]
+filters = ["fnalr", "fnalo", "fnalre", "dem", "9500sqft", "72pup¶228t", ":onc", "onc", "lac", "e", ".on", "sal", "...al", "...", "ford"]
 
 for i in range(len(final)):
   for f in filters:
